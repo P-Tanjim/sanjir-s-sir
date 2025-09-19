@@ -113,15 +113,16 @@ buttons.forEach(button => {
                 break;
             }
         }
-        
-        // if (index === 1) {
-        //     topic(index);
-        // } else {
-        //     redirect();
-        // }
-        topic(index)
+
+        // Only allow 1, 2, 3 to work
+        if (index === 1 || index === 2 || index === 3) {
+            topic(index);
+        } else {
+            redirect();
+        }
     });
 });
+
 
 function topic(topicNumber){
     window.location.href = `../chp1topic/topic${topicNumber}.html`;
