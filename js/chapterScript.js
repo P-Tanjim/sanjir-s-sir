@@ -125,7 +125,7 @@ buttons.forEach(button => {
 
 
 function topic(topicNumber){
-    window.location.href = `../chp1topic/topic${topicNumber}.html`;
+    window.location.href = `../sanjir-s-sir/chp1topic/topic${topicNumber}.html`;
 }
 function redirect() {
     window.location.href = "no-content.html";
