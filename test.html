@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNA Navbar Icon</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+
+    .dna {
+      position: relative;
+      width: 80px;
+      height: 200px;
+      perspective: 800px;
+      cursor: pointer;
+    }
+
+    .strand {
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background: #3da9fc;
+      border-radius: 10px;
+    }
+
+    .strand.left {
+      left: 15px;
+      animation: twist 4s linear infinite;
+    }
+
+    .strand.right {
+      right: 15px;
+      animation: twist 4s linear infinite reverse;
+    }
+
+    .bond {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 10px;
+      border-radius: 10px;
+      animation: bondTwist 4s linear infinite;
+    }
+
+    /* Color cycle for A-T, G-C */
+    .bond:nth-child(1n) { background: #ef4565; } /* red */
+    .bond:nth-child(2n) { background: #ffb703; } /* yellow */
+    .bond:nth-child(3n) { background: #06d6a0; } /* green */
+    .bond:nth-child(4n) { background: #8338ec; } /* purple */
+
+    /* Place bonds evenly along DNA */
+    .bond:nth-child(1) { top: 10%; }
+    .bond:nth-child(2) { top: 20%; }
+    .bond:nth-child(3) { top: 30%; }
+    .bond:nth-child(4) { top: 40%; }
+    .bond:nth-child(5) { top: 50%; }
+    .bond:nth-child(6) { top: 60%; }
+    .bond:nth-child(7) { top: 70%; }
+    .bond:nth-child(8) { top: 80%; }
+    .bond:nth-child(9) { top: 90%; }
+
+    @keyframes twist {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
+    @keyframes bondTwist {
+      from { transform: translateX(-50%) rotateY(0deg); }
+      to { transform: translateX(-50%) rotateY(360deg); }
+    }
+
+    /* OPEN state (when nav is open) */
+    .dna.open .strand {
+      animation-play-state: paused;
+    }
+
+    .dna.open .bond {
+      animation-play-state: paused;
+      transform: translateX(-50%) rotateY(90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="dna" id="dna">
+    <div class="strand left"></div>
+    <div class="strand right"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+    <div class="bond"></div>
+  </div>
+
+  <script>
+    const dna = document.getElementById("dna");
+    dna.addEventListener("click", () => {
+      dna.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

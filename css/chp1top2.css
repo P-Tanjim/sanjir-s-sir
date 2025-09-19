@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "logo";
+  src: url("../fonts/logo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "english";
+  src: url("../fonts/engFont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "bangla";
+  src: url("../fonts/bangla-font.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+  font-family: "english" sans-serif;
+  background-color: #f0fdf4;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #4caf50 #f0fdf4;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.learn {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.headImage {
+  position: inherit;
+  top: 45%;
+  left: 50%;
+  height: 70vh;
+  width: 60vw;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+.headImage img {
+  height: 100%;
+  width: 100%;
+  clip-path: inset(5px 5px);
+  object-position: center;
+}
+.text-box {
+  height: 40%;
+  width: 90%;
+  display: flex;
+}
+.star-box {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.star-line1,
+.star-line2,
+.star-line3,
+.star-line4 {
+  height: 30px;
+  width: 2px;
+  background-color: #2196f3;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.star-line2 {
+  rotate: 45deg;
+}
+.star-line3 {
+  rotate: 90deg;
+}
+.star-line4 {
+  rotate: -45deg;
+}
+.informationOfprotoplasm {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "bangla";
+  font-size: 1.6rem;
+  margin-left: 1vw;
+}
+.feature-box {
+  position: inherit;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 65vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+}
+
+.cholon-box {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 5vh 0 5vh 0;
+  height: 60vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+}
+
+.cholon-box .first-div {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cholon-box .first-div .tired-design-line {
+  height: 50%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 2vw 0 2vw;
+}
+.cholon-box .first-div .tired-design-line .line1,
+.cholon-box .first-div .tired-design-line .line2 {
+  width: 100%;
+  height: 5px;
+  background-color: #1c1c1c;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  transform-origin: left;
+  border-radius: 20px;
+}
+.cholon-box .first-div .tired-design-line .line1 {
+  animation: line-one-pc both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 30%;
+}
+.cholon-box .first-div .tired-design-line .line2 {
+  animation: line-two-pc both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+}
+
+@keyframes line-one-pc {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: 20deg;
+    transform: scaleX(1);
+  }
+}
+@keyframes line-one-tablet {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: 35deg;
+    transform: scaleX(1.2);
+  }
+}
+@keyframes line-one-mobile {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: 50deg;
+    transform: scaleX(1.7);
+  }
+}
+
+
+@keyframes line-two-pc {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: -20deg;
+    transform: scaleX(1);
+  }
+}
+@keyframes line-two-tablet {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: -35deg;
+    transform: scaleX(1.2);
+  }
+}
+@keyframes line-two-mobile {
+  from{
+    rotate: 0deg;
+    transform: scaleX(0);
+  }
+  to{
+    rotate: -50deg;
+    transform: scaleX(1.7);
+  }
+}
+
+.cholon-box .first-div .sub-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.cholon-box .first-div .sub-div .first-text {
+  animation: gaping-pc both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 60%;
+}
+
+@keyframes gaping-pc {
+  from{
+    margin-bottom: 0vh;
+  }
+  to{
+    margin-bottom: 10vh;
+  }
+}
+@keyframes gaping-mobile {
+  from{
+    margin-bottom: 0vh;
+  }
+  to{
+    margin-bottom: 2vh;
+  }
+}
+
+.cholon-box .second-div{
+  width: 90%;
+}
+.cholon-box .second-div div{
+  width: auto;
+  text-align: left;
+}
+.cholon-box .second-div .box-one{
+  margin-bottom: 2vh;
+}
+.button-two{
+  position: inherit;
+  top: 80%;
+  left: 50%;
+}
+.button button{
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .feature-box {
+    top: 30%;
+  }
+  .headImage {
+    width: 80vw;
+  }
+  .cholon-box {
+    top: 45%;
+    height: 40vh;
+    padding: 2vh 0 2vh 0;
+  }
+  .cholon-box .first-div .tired-design-line .line1 {
+    animation: line-one-tablet both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+  .cholon-box .first-div .tired-design-line .line2 {
+    animation: line-two-tablet both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+  .button-two{
+    top: 70%;
+  }
+}
+@media (max-width: 700px) {
+  .cholon-box {
+    height: 60vh;
+  }
+}
+@media (max-width: 500px) {
+  .feature-box {
+    top: 25%;
+  }
+  .headImage {
+    height: 55vh;
+    width: 90vw;
+  }
+  .informationOfprotoplasm {
+    font-size: 1.4rem;
+  }
+  .cholon-box {
+    top: 35%;
+    height: 65vh;
+    padding: 2vh 0 2vh 0;
+  }
+  .cholon-box .first-div .tired-design-line .line1 {
+    animation: line-one-mobile both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+  .cholon-box .first-div .tired-design-line .line2 {
+    animation: line-two-mobile both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+  }
+  .cholon-box .first-div .sub-div .first-text {
+    animation: gaping-mobile both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 60%;
+  }
+
+  .button-two{
+    top: 50%;
+  }
+}

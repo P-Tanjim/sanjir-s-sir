@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "logo";
+  src: url("../fonts/logo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "english";
+  src: url("../fonts/engFont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "link";
+  src: url("../fonts/navlink.ttf") format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color:  rgb(255, 66, 66) white;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  /* background: linear-gradient(90deg, #4caf50, #99c97d); */
+  background-color: #f0fdf4;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: 'logo';
+  color: #4caf50;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+  font-family: 'link';
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #4caf50;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Burger menu for mobile */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #4caf50;
+  transition: all 0.3s ease;
+}
+
+.burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height: calc(100vh - 70px);
+    width: 50%;
+    background: linear-gradient(180deg, rgb(255, 100, 100), rgb(255, 179, 179));
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.nav-active {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: flex;
+  }
+  .nav-links li a {
+    color: white;
+  }
+}
+
+.box {
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.red-box {
+  height: 70%;
+  width: 80%;
+  margin-top: 5vh;
+  background: #fff5f5;
+  box-shadow: 0 0 20px 3px rgba(230, 57, 70, 0.2),
+    0 10px 30px rgba(230, 57, 70, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#content {
+  height: auto;
+  width: auto;
+  font-size: 25px;
+  background-color: #fadbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+.red-box #text {
+  color: red;
+  margin-bottom: 30vh;
+  font-size: 20px;
+}
+
+.button {
+  width: 50%;
+  border-radius: 20px;
+  padding: 15px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: auto;
+  transform: translate(45%, 0%);
+  padding-bottom: 20vh;
+  position: inherit;
+  top: 0;
+  left: 50%;
+}
+.button button {
+  border: 5px solid rgb(255, 66, 66);
+  border-radius: 20px;
+  font-family: "english";
+  background-color: rgb(255, 66, 66);
+  color: #f0fdf4;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+.button button:hover {
+  transform: scale(1.2);
+}
+@media (max-width: 700px) {
+    .button{
+        transform: translate(40%, 0%);
+    }    
+}
+@media (max-width: 500px) {
+    .box{
+        height: 80%;
+    }
+    .button{
+        transform: translate(35%, 0%);
+    }
+    .button button{
+        font-size: 1rem;
+    }
+}

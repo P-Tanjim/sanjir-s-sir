@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanjir's Sir</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/chapter.css" />
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo">SANJIR's SIR</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact Me</a></li>
+        <li><a onclick="goBack()">Go Back</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- chapter -->
+    <div class="division">
+      <p id="divi">DIVISIONS</p>
+      <div class="color-box">
+        <div class="end-box">
+          <div class="end"></div>
+          <p id="end">END</p>
+        </div>
+        <div class="rema-box">
+          <div class="rema"></div>
+          <p id="rema">REMANNING</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards -->
+
+    <div class="card-wrapper">
+      <!-- <div class="card-box">
+        <div class="card-inner">
+          <div id="topic">
+            <p>টপিক ১</p>
+          </div>
+
+          <div id="image">
+            <img src="topic1.webp" alt="topic image" />
+          </div>
+
+          <div id="name">
+            <p class='topic-name'>কোষের গঠন</p>
+            <p  id="description">কোষ হচ্চে কোষ। যা তোমরা পরবর্তী টপিকে জানবে</p>
+          </div>
+
+          <div>
+            
+          </div>
+        </div>
+        <div class="card-back">
+          <p class="motivation">``মানুষ সবকিছু অর্জন করতে পারে। তাদের শুধু মানসিকতা প্রয়োজন।"</p>
+          <p class="speaker">-তানজিম</p>
+
+          <button class="read">Start Learning</button>
+        </div>
+      </div> -->
+    </div>
+    <div class="button">
+      <button onclick="goBack()" class="box">GO BACK</button>
+    </div>
+
+    <script src="./js/chapterScript.js"></script>
+  </body>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+      burger.classList.toggle("toggle");
+    });
+  </script>
+</html>

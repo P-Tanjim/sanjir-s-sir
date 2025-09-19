@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>কোষ প্রাচীর</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/chp1top2.css" />
+    <link rel="stylesheet" href="../css/chp1top1.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo">SANJIR's SIR</div>
+      <div class="topic-name">Topic 2</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact Me</a></li>
+        <li><a onclick="goBack()">Go Back</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- topic -->
+    <div class="division box">
+      <p id="divi">প্রোটোপ্লাজম</p>
+    </div>
+
+    <!-- learing start -->
+    <div class="learn">
+      <div class="headImage">
+        <img
+          src="../chp1 image/topic2headImage.webp"
+          alt="প্রোটোপ্লাজম ছবি"
+          class="imageRevel"
+        />
+      </div>
+
+      <div class="feature-box boxApare">
+        <div class="upper-box">
+          <div class="main-text-vhut box">
+            <p>ভৌত বৈশিষ্ট</p>
+          </div>
+
+          <div class="dividerLine"></div>
+
+          <div class="sub-text-vhut">
+            <div class="full-box">
+              <div class="connector"></div>
+              <div class="num-one box">
+                <p>অর্ধ তরল</p>
+              </div>
+            </div>
+            <div class="full-box">
+              <div class="connector"></div>
+              <div class="num-two box">
+                <p>জেলির মতো</p>
+              </div>
+            </div>
+            <div class="full-box">
+              <div class="connector"></div>
+              <div class="num-three box">
+                <p>কলয়েড ধর্মী</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-box">
+          <div class="star-box">
+            <div class="star">
+              <div class="star-line1"></div>
+              <div class="star-line2"></div>
+              <div class="star-line3"></div>
+              <div class="star-line4"></div>
+            </div>
+            <div class="star">
+              <div class="star-line1"></div>
+              <div class="star-line2"></div>
+              <div class="star-line3"></div>
+              <div class="star-line4"></div>
+            </div>
+            <div class="star">
+              <div class="star-line1"></div>
+              <div class="star-line2"></div>
+              <div class="star-line3"></div>
+              <div class="star-line4"></div>
+            </div>
+            <div class="star">
+              <div class="star-line1"></div>
+              <div class="star-line2"></div>
+              <div class="star-line3"></div>
+              <div class="star-line4"></div>
+            </div>
+          </div>
+          <div class="informationOfprotoplasm">
+            <p>(70%-90%) H<sub>2</sub>O থাকে</p>
+            <p style="color: rgb(255, 54, 54)">জীবনের ভৌত ভিত্তি</p>
+            <p>১ম আবিষ্কার: ফেলিক্স ডুজারডিন। নাম দেন - সারকোড</p>
+            <p>প্রোটোপ্লাজম নামটি দেন: পার্কিনজে</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cholon-box boxApare">
+        <div class="first-div">
+          <div class="text box">
+            <p>প্রোটোপ্লাজমের চলন :</p>
+          </div>
+          <div class="tired-design-line">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+
+          <div class="sub-div">
+            <div class="first-text box">
+              <p>একমুখী আবর্তন</p>
+            </div>
+            <div class="second-text box">
+              <p>বহুমুখী আবর্তন</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="second-div">
+          <div class="box-one box left">
+            <p>
+              <span style="color: #2196f3">একমুখী আবর্তন: </span> একটি মাত্র
+              গহ্ববরকে কেন্দ্র করে ঘুরে
+            </p>
+          </div>
+          <div class="box-two box left">
+            <p>
+              <span style="color: #2196f3">বহুমুখী আবর্তন: </span> একাধিক
+              গহ্ববরকে কেন্দ্র করে ঘুরে
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="button button-two">
+        <button onclick="goBack()" class="box">Finish this topic</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.2.1/ttas.js"></script>
+  </body>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+    burger.classList.toggle("toggle");
+    });
+  </script>
+</html>

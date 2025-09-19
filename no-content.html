@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanjir's Sir</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/no-content.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">SANJIR's SIR</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- no content -->
+
+    <div class="box">
+      <div class="red-box">
+        <div id="content">
+          <p>NO CONTENT</p>
+        </div>
+        <p id="text">ADD WILL BE SOON</p>
+      </div>
+    </div>
+    <div class="button">
+      <button onclick="goBack()" class="box">GO BACK</button>
+    </div>
+  </body>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+      burger.classList.toggle("toggle");
+    });
+  </script>
+</html>

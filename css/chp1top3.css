@@ -1,0 +1,556 @@
+@font-face {
+  font-family: "logo";
+  src: url("../fonts/logo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "english";
+  src: url("../fonts/engFont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "bangla";
+  src: url("../fonts/bangla-font.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+  font-family: "english" sans-serif;
+  background-color: #f0fdf4;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #4caf50 #f0fdf4;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.learn {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.differentName {
+  width: 80%;
+  position: inherit;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modelWapper {
+  position: inherit;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 85%;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+}
+.modelWapper .middle-box {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.modelWapper .middle-box .image-box {
+  transform: translate(50%, 0%);
+  height: 50%;
+  width: 50%;
+}
+.modelWapper .middle-box .image-box img {
+  height: 100%;
+  width: 100%;
+}
+
+.modelWapper .models-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2vh;
+}
+.modelWapper .middle-box .sub-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.fluidModel {
+  position: inherit;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150vh;
+  width: 85%;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+}
+.layer {
+  height: 90%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.layer .main {
+  height: auto;
+  width: 50%;
+}
+
+.layer .image-box {
+  position: static;
+  height: 50%;
+  width: 60%;
+  transform: translate(0%, 0%);
+  padding-bottom: 2vw;
+}
+.layer .image-box img {
+  height: 100%;
+  width: 100%;
+  clip-path: inset(5px 5px);
+}
+
+.layer .sub-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+.layer .sub-div .line {
+  position: inherit;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  height: 100%;
+}
+.layer .sub-div .pointer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 15%;
+}
+.layer .sub-div .pointer .one,
+.layer .sub-div .pointer .two,
+.layer .sub-div .pointer .three,
+.layer .sub-div .pointer .four {
+  width: 100%;
+  height: 4px;
+  background-color: #1c1c1c;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  text-align: left;
+}
+
+.layer .sub-div .subs {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 103%;
+  width: 80%;
+  font-family: "bangla";
+  font-size: 1.9rem;
+  position: relative;
+  margin-left: 1vw;
+}
+.layer .sub-div .subs .first,
+.layer .sub-div .subs .second,
+.layer .sub-div .subs .third,
+.layer .sub-div .subs .fourth {
+  height: auto;
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2vw;
+}
+.layer .sub-div .subs .second {
+  margin-top: 8vh;
+}
+.layer .sub-div .subs .third {
+  margin-bottom: 6vh;
+}
+
+.short-details {
+  position: inherit;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150vh;
+  width: 85%;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+}
+.short-details .layer {
+  gap: 10vh;
+}
+.short-details .layer .upper {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.short-details .layer .upper .image-box {
+  transform: translate(0%, 0%);
+  height: 100%;
+  width: 20%;
+  padding: 0;
+}
+.short-details .layer .upper .image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  clip-path: inset(0px 0px);
+}
+.short-details .layer .upper .arrows {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3rem;
+  color: #ec923d;
+}
+.short-details .layer .upper .arrows i {
+  animation: left-arrow-pc both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 20%;
+}
+@keyframes left-arrow-pc {
+  from {
+    opacity: 0;
+    transform: translateX(-100px) scaleX(4) scaleY(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scaleX(4) scaleY(1);
+  }
+}
+.short-details .layer .upper .text {
+  height: 100%;
+  width: 40%;
+  font-family: "bangla";
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.short-details .layer .lower {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.short-details .layer .lower .arrow-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ec923d;
+  font-size: 5rem;
+}
+.short-details .layer .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "english";
+  color: #2196f3;
+  font-size: 1.9rem;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.short-details .layer .lower .imageBoxOne,
+.short-details .layer .lower .imageBoxTwo {
+  transform: translate(0%, 0%);
+  height: 90%;
+  width: 10%;
+  padding: 0;
+}
+.short-details .layer .lower .imageBoxOne {
+  animation: flip-flop-one 2s ease infinite;
+}
+.short-details .layer .lower .imageBoxTwo {
+  animation: flip-flop-two 2s ease infinite;
+}
+.short-details .layer .lower .imageBoxOne img,
+.short-details .layer .lower .imageBoxTwo img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  clip-path: inset(0px 0px);
+}
+
+@keyframes flip-flop-one {
+  0% {
+    transform: translate(-100%, 0%);
+  }
+  50% {
+    transform: translate(600%, 0%);
+  }
+  100% {
+    transform: translate(-100%, 0%);
+  }
+}
+@keyframes flip-flop-two {
+  0% {
+    transform: translate(100%, 0%);
+  }
+  50% {
+    transform: translate(-600%, 0%);
+  }
+  100% {
+    transform: translate(100%, 0%);
+  }
+}
+
+@keyframes flip-flop-one-mb {
+  0% {
+    transform: translate(-100%, 0%);
+  }
+  50% {
+    transform: translate(400%, 0%);
+  }
+  100% {
+    transform: translate(-100%, 0%);
+  }
+}
+@keyframes flip-flop-two-mb {
+  0% {
+    transform: translate(100%, 0%);
+  }
+  50% {
+    transform: translate(-400%, 0%);
+  }
+  100% {
+    transform: translate(100%, 0%);
+  }
+}
+@keyframes rightCome {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.button-three{
+  position: inherit;
+  top: 120%;
+  left: 50%;
+}
+@media (max-width: 1000px) {
+  .differentName {
+    top: 15%;
+  }
+  .modelWapper {
+    height: 55vh;
+    top: 25%;
+  }
+  .modelWapper .middle-box .image-box {
+    transform: translate(0%, 0%);
+    height: 30%;
+    width: 80%;
+  }
+  .button-three {
+    top: 85%;
+  }
+
+  .fluidModel {
+    height: 95vh;
+    top: 40%;
+  }
+  .layer .sub-div {
+    height: 60%;
+  }
+  .layer {
+    height: 95%;
+  }
+  .layer .sub-div {
+    height: 50%;
+  }
+  .layer .image-box {
+    height: 30%;
+    width: 95%;
+  }
+
+  .layer .main {
+    width: 90%;
+  }
+
+  .layer .sub-div .subs .second {
+    margin-top: 5vh;
+  }
+  .layer .sub-div .subs .third {
+    margin-bottom: 4vh;
+  }
+  .short-details{
+    top: 50%;
+    height: 90vh;
+  }
+  .short-details .layer .lower .arrow-box {
+    font-size: 3.5rem;
+  }
+  .short-details .layer .lower .imageBoxOne,
+  .short-details .layer .lower .imageBoxTwo {
+    height: 65%;
+  }
+  .short-details .layer .lower .arrow-box {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .modelWapper {
+    height: 80vh;
+  }
+  .layer .sub-div .subs .second {
+    margin-top: 6vh;
+  }
+  .layer .sub-div .subs .third {
+    margin-bottom: 2vh;
+  }
+  .short-details .layer .upper .arrows i {
+    transform: scaleX(1) scaleY(1);
+    animation: rightCome both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+  }
+}
+@media (max-width: 500px) {
+  .differentName {
+    top: 20%;
+  }
+  .modelWapper {
+    height: 85vh;
+    top: 30%;
+  }
+  .modelWapper .middle-box .image-box {
+    transform: translate(0%, 0%);
+    height: 30%;
+    width: 100%;
+  }
+
+  .button-three {
+    top: 80%;
+  }
+  .fluidModel {
+    height: 95vh;
+    top: 45%;
+  }
+  .layer .sub-div {
+    height: 60%;
+  }
+  .layer {
+    height: 95%;
+  }
+  .layer .sub-div {
+    height: 50%;
+  }
+  .layer .image-box {
+    height: 20%;
+    width: 100%;
+  }
+
+  .layer .main {
+    width: 90%;
+  }
+  .layer .sub-div .subs {
+    font-size: 1.5rem;
+  }
+  .layer .sub-div .subs .second {
+    margin-top: 10vh;
+  }
+  .layer .sub-div .subs .third {
+    margin-bottom: 0vh;
+  }
+
+
+  .short-details{
+    top: 50%;
+    height: 90vh;
+  }
+  .short-details .layer .upper .image-box {
+    width: 40%;
+    height: 80%;
+  }
+  .short-details .layer .upper .arrows i {
+    transform: scaleX(1) scaleY(1);
+    animation: rightCome both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+  }
+  .short-details .layer .upper .text {
+    font-size: 1.3rem;
+  }
+  .short-details .layer .lower .imageBoxOne,
+  .short-details .layer .lower .imageBoxTwo {
+    height: 50%;
+    width: 15%;
+  }
+  .short-details .layer .lower .arrow-box {
+    font-size: 2rem;
+  }
+  .short-details .layer .lower .imageBoxOne,
+  .short-details .layer .lower .imageBoxTwo {
+    height: 100%;
+  }
+  .short-details .layer .lower .imageBoxOne {
+    animation: flip-flop-one-mb 2s ease infinite;
+  }
+  .short-details .layer .lower .imageBoxTwo {
+    animation: flip-flop-two-mb 2s ease infinite;
+  }
+  .short-details .layer .lower {
+    height: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .fluidModel {
+    height: 120vh;
+  }
+  .layer .sub-div {
+    height: 60%;
+  }
+  .layer .sub-div .subs .second {
+    margin-top: 13vh;
+  }
+}
