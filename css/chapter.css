@@ -31,7 +31,6 @@ body {
   scrollbar-color: #4caf50 #f0fdf4;
 }
 
-
 html,
 body {
   overflow-x: hidden;
@@ -46,7 +45,7 @@ body {
   /* background: linear-gradient(90deg, #4caf50, #99c97d); */
   background-color: #f0fdf4;
   color: white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 10;
 }
@@ -57,7 +56,7 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
-  font-family: 'logo';
+  font-family: "logo";
   color: #4caf50;
 }
 
@@ -74,12 +73,12 @@ body {
   font-weight: 700;
   position: relative;
   transition: 0.3s;
-  font-family: 'english';
-  font-family: 'link';
+  font-family: "english";
+  font-family: "link";
 }
 
 .nav-links li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -146,7 +145,6 @@ body {
     color: #f0fdf4;
   }
 }
-
 
 .division {
   height: 10vh;
@@ -227,7 +225,7 @@ body {
 }
 
 @keyframes scaling {
-  to{
+  to {
     transform: translate(-10%, 0px) scale(1);
   }
 }
@@ -254,7 +252,7 @@ body {
 }
 
 .card-inner {
-  z-index: 2; 
+  z-index: 2;
   justify-content: space-between;
 }
 
@@ -305,15 +303,14 @@ body {
   border-radius: 8px;
 }
 
-#name{
-  font-family: 'bangla';
+#name {
+  font-family: "bangla";
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .topic-name {
-
   font-size: 1.3rem;
   color: rgb(29, 134, 31);
   margin-top: 5px;
@@ -321,7 +318,6 @@ body {
 }
 
 #description {
-
   color: rgb(120, 120, 120);
   font-size: 0.9rem;
   margin-top: 5px;
@@ -334,7 +330,7 @@ body {
   color: rgb(29, 134, 31);
 }
 
-.card-back strong{
+.card-back strong {
   transform: rotateY(180deg);
 }
 
@@ -347,7 +343,7 @@ body {
 }
 
 .read {
-  font-family: 'bangla';
+  font-family: "bangla";
   padding: 10px 20px;
   background-color: rgb(29, 134, 31);
   color: white;
@@ -358,7 +354,19 @@ body {
   font-size: 1.1rem;
 }
 
-.button{
+.btn {
+  font-family: "bangla";
+  padding: 10px 20px;
+  background-color: rgb(29, 134, 31);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.button {
   width: 50%;
   border-radius: 20px;
   padding: 15px;
@@ -370,9 +378,9 @@ body {
   transform: translate(45%, 0%);
   margin-top: 5vh;
 }
-.button button{
+.button button {
   border: 5px solid #4caf50;
-  font-family: 'english';
+  font-family: "english";
   background-color: #4caf50;
   color: #f0fdf4;
   font-size: 1.5rem;
@@ -380,7 +388,7 @@ body {
   padding: 15px 30px 15px 30px;
   border-radius: 20px;
 }
-.button button:hover{
+.button button:hover {
   transform: scale(1.2);
 }
 
@@ -414,15 +422,15 @@ body {
   }
 }
 @media (max-width: 700px) {
-    .button{
-        transform: translate(40%, 0%);
-    }    
+  .button {
+    transform: translate(40%, 0%);
+  }
 }
 @media (max-width: 500px) {
-    .button{
-        transform: translate(35%, 0%);
-    }
-    .button button{
-        font-size: 1rem;
-    }
+  .button {
+    transform: translate(35%, 0%);
+  }
+  .button button {
+    font-size: 1rem;
+  }
 }
