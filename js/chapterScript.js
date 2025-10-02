@@ -192,7 +192,6 @@ buttons.forEach((button) => {
       }
     }
 
-    // Only allow 1, 2, 3 to work
     if (index === 1 || index === 2 || index === 3 || index === 4) {
       topic(index);
     } else {
