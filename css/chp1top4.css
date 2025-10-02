@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "logo";
+  src: url("../fonts/logo.ttf") format("truetype");
+}
+@font-face {
+  font-family: "english";
+  src: url("../fonts/engFont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "bangla";
+  src: url("../fonts/bangla-font.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  user-select: none;
+  font-family: "english" sans-serif;
+  background-color: #f0fdf4;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #4caf50 #f0fdf4;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.learn {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.differentName {
+  width: 80%;
+  position: inherit;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-spacing: 3px;
+}
+
+.informaiton {
+  position: inherit;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2vh;
+}
+.informaiton i {
+  color: #2196f3;
+}
+.feature {
+  position: inherit;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 5vh 0 5vh 0;
+  width: 85%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid #4caf50;
+  gap: 3vh;
+}
+.main-connector {
+  height: 20px;
+  width: 4px;
+  transform: translate(0%, -110%);
+  background-color: #1c1c1c;
+}
+.text-box {
+  width: 90%;
+  font-family: "bangla";
+  font-size: 1.8rem;
+}
+.text-box p {
+  padding-bottom: 2vh;
+}
+.text-box i {
+  color: #2196f3;
+}
+
+.scale-right {
+  animation: scale-right both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 20%;
+}
+
+@keyframes scale-right {
+  from {
+    transform: translateX(-100px) scale(0);
+  }
+  to {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.obosthan {
+  width: 85%;
+  border: 3px solid #4caf50;
+  border-radius: 20px;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5vh 0 5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+}
+.obosthan .main-text {
+  width: 20%;
+}
+.obosthan .information {
+  font-family: "bangla";
+  font-size: 1.8rem;
+  width: 90%;
+}
+.obosthan .information p,
+.obosthan .information_two p {
+  padding: 1vh;
+}
+.obosthan .information_two {
+  width: 90%;
+  font-family: "bangla";
+  font-size: 1.8rem;
+}
+.knowledge {
+  width: 85%;
+  border: 3px solid #4caf50;
+  border-radius: 20px;
+  position: inherit;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5vh 0 5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+}
+.knowledge .main-text {
+  width: 15%;
+}
+.knowledge .information {
+  width: 90%;
+  font-family: "bangla";
+  font-size: 1.8rem;
+}
+.knowledge .information p {
+  word-spacing: 5px;
+  padding-bottom: 1vh;
+}
+
+.boldText {
+  color: #2196f3;
+}
+.button-four {
+  position: inherit;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.highlight_animaiton {
+  position: relative;
+  display: inline-block; /* important */
+  padding: 0 0.12em; /* small padding so highlight shows nicely */
+  z-index: 1; /* text above the pseudo element */
+}
+
+.highlight_animaiton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ccff00;
+  z-index: -1;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: markerGrow_direct 1s linear forwards;
+  -webkit-transform-origin: left center;
+  -webkit-transform: scaleX(0);
+  -webkit-animation: markerGrow_direct 1s linear forwards;
+}
+
+@keyframes markerGrow_direct {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes markerGrow_direct {
+  from {
+    -webkit-transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+  }
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.12em;
+  z-index: 1;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ccff00;
+  z-index: -1; /* behind the text */
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation-name: markerGrow;
+  animation-duration: 0.6s;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+  animation-fill-mode: both;
+  -webkit-transform-origin: left center;
+  -webkit-transform: scaleX(0);
+  -webkit-animation-: markerGrow 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+}
+
+@keyframes markerGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes markerGrow {
+  from {
+    -webkit-transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .differentName {
+    top: 15%;
+  }
+  .informaiton {
+    top: 25%;
+  }
+  .text-box p {
+    font-size: 1.5rem;
+  }
+  .button-four {
+    top: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .differentName {
+    top: 20%;
+  }
+  .informaiton {
+    top: 30%;
+  }
+  .feature {
+    top: 35%;
+    gap: 5vh;
+  }
+  .text-box p {
+    font-size: 1.3rem;
+  }
+  .obosthan {
+    top: 45%;
+  }
+  .knowledge {
+    top: 55%;
+  }
+  .button-four {
+    top: 80%;
+  }
+}
